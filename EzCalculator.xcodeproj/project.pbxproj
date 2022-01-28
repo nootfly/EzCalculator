@@ -17,6 +17,16 @@
 		7D81441F27A2704600660304 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8143F527A2704300660304 /* ContentView.swift */; };
 		7D81442027A2704600660304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8143F627A2704600660304 /* Assets.xcassets */; };
 		7D81442127A2704600660304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8143F627A2704600660304 /* Assets.xcassets */; };
+		7D81443327A2728B00660304 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443227A2728B00660304 /* CalculatorButton.swift */; };
+		7D81443427A2728B00660304 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443227A2728B00660304 /* CalculatorButton.swift */; };
+		7D81443627A2757200660304 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443527A2757200660304 /* CalculatorButtonItem.swift */; };
+		7D81443727A2757200660304 /* CalculatorButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443527A2757200660304 /* CalculatorButtonItem.swift */; };
+		7D81443927A27E6100660304 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443827A27E6100660304 /* CalculatorModel.swift */; };
+		7D81443A27A27E6100660304 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443827A27E6100660304 /* CalculatorModel.swift */; };
+		7D81443C27A27E9900660304 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443B27A27E9900660304 /* Calculator.swift */; };
+		7D81443D27A27E9900660304 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443B27A27E9900660304 /* Calculator.swift */; };
+		7D81443F27A27FD900660304 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443E27A27FD900660304 /* CalculatorView.swift */; };
+		7D81444027A27FD900660304 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81443E27A27FD900660304 /* CalculatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,11 @@
 		7D81441427A2704600660304 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D81441827A2704600660304 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		7D81441A27A2704600660304 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		7D81443227A2728B00660304 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
+		7D81443527A2757200660304 /* CalculatorButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonItem.swift; sourceTree = "<group>"; };
+		7D81443827A27E6100660304 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		7D81443B27A27E9900660304 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		7D81443E27A27FD900660304 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +112,8 @@
 		7D8143F327A2704300660304 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7D81443127A271ED00660304 /* Models */,
+				7D81443027A271D200660304 /* Views */,
 				7D8143F427A2704300660304 /* EzCalculatorApp.swift */,
 				7D8143F527A2704300660304 /* ContentView.swift */,
 				7D8143F627A2704600660304 /* Assets.xcassets */,
@@ -139,6 +156,25 @@
 				7D81441A27A2704600660304 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		7D81443027A271D200660304 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D81443227A2728B00660304 /* CalculatorButton.swift */,
+				7D81443E27A27FD900660304 /* CalculatorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D81443127A271ED00660304 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D81443527A2757200660304 /* CalculatorButtonItem.swift */,
+				7D81443827A27E6100660304 /* CalculatorModel.swift */,
+				7D81443B27A27E9900660304 /* Calculator.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D81441E27A2704600660304 /* ContentView.swift in Sources */,
+				7D81443F27A27FD900660304 /* CalculatorView.swift in Sources */,
+				7D81443927A27E6100660304 /* CalculatorModel.swift in Sources */,
+				7D81443327A2728B00660304 /* CalculatorButton.swift in Sources */,
+				7D81443627A2757200660304 /* CalculatorButtonItem.swift in Sources */,
 				7D81441C27A2704600660304 /* EzCalculatorApp.swift in Sources */,
+				7D81443C27A27E9900660304 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +350,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D81441F27A2704600660304 /* ContentView.swift in Sources */,
+				7D81444027A27FD900660304 /* CalculatorView.swift in Sources */,
+				7D81443A27A27E6100660304 /* CalculatorModel.swift in Sources */,
+				7D81443427A2728B00660304 /* CalculatorButton.swift in Sources */,
+				7D81443727A2757200660304 /* CalculatorButtonItem.swift in Sources */,
 				7D81441D27A2704600660304 /* EzCalculatorApp.swift in Sources */,
+				7D81443D27A27E9900660304 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +517,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +531,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -501,7 +548,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -514,7 +562,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
