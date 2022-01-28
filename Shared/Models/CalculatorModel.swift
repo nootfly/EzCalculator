@@ -8,11 +8,16 @@
 import SwiftUI
 import Combine
 
-class CalculatorModel: ObservableObject {
+
+protocol CalculatorProtocol {
+    func calc(_ item: CalculatorItem)
+}
+
+class CalculatorModel: ObservableObject, CalculatorProtocol {
 
     @Published var calculator: Calculator = .left("0")
    
-    func apply(_ item: CalculatorButtonItem) {
+    func calc(_ item: CalculatorItem) {
         calculator = calculator.apply(item: item)
     
     }

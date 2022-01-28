@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-enum CalculatorButtonItem {
+enum CalculatorItem {
 
     enum Op: String {
         case plus = "+"
@@ -31,7 +31,26 @@ enum CalculatorButtonItem {
     case command(Command)
 }
 
-extension CalculatorButtonItem {
+extension CalculatorItem.Op {
+    func calculate(l: String, r: String) -> String? {
+
+        guard let left = Double(l), let right = Double(r) else {
+            return nil
+        }
+
+        let result: Double?
+        switch self {
+        case .plus: result = left + right
+        case .minus: result = left - right
+        case .multiply: result = left * right
+        case .divide: result = right == 0 ? nil : left / right
+        case .equal: fatalError()
+        }
+        return result.map { String($0) }
+    }
+}
+
+extension CalculatorItem {
     var title: String {
         switch self {
         case .digit(let value): return String(value)
@@ -69,9 +88,9 @@ extension CalculatorButtonItem {
     }
 }
 
-extension CalculatorButtonItem: Hashable {}
+extension CalculatorItem: Hashable {}
 
-extension CalculatorButtonItem: CustomStringConvertible {
+extension CalculatorItem: CustomStringConvertible {
     var description: String {
         switch self {
         case .digit(let num): return String(num)

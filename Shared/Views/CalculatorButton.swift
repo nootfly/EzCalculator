@@ -14,7 +14,7 @@ let scale = UIScreen.main.bounds.width / 414
 struct CalculatorButton : View {
     
     
-    let item: CalculatorButtonItem
+    let item: CalculatorItem
 
    
     let fontSize: CGFloat = 38
@@ -23,9 +23,7 @@ struct CalculatorButton : View {
   
 
     var body: some View {
-//        let scale = (verticalSizeClass == .regular ? UIScreen.main.bounds.width / 414 : UIScreen.main.bounds.height / 600)
-      
-        //print(screenSize)
+
       
         Button(action: action) {
             Text(item.title)

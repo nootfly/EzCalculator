@@ -12,9 +12,9 @@ import Combine
 
 struct CalculatorView: View {
     @EnvironmentObject var model: CalculatorModel
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
-    let data: [CalculatorButtonItem] = [
+    
+    let data: [CalculatorItem] = [
         .command(.clear), .command(.flip),
         .command(.percent), .op(.divide),
         .digit(7), .digit(8), .digit(9), .op(.multiply),
@@ -23,7 +23,7 @@ struct CalculatorView: View {
         
         
     ]
-    let lastRowData : [CalculatorButtonItem] = [ .digit(0), .dot, .op(.equal)]
+    let lastRowData : [CalculatorItem] = [ .digit(0), .dot, .op(.equal)]
     
     let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 4)
     
@@ -40,14 +40,14 @@ struct CalculatorView: View {
             LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(data, id: \.self) { item in
                     CalculatorButton(item: item) {
-                        self.model.apply(item)
+                        self.model.calc(item)
                     }
                 }
             }
             LazyVGrid(columns: lastRowcolumns, spacing: 8) {
                 ForEach(lastRowData, id: \.self) { item in
                     CalculatorButton(item: item) {
-                        self.model.apply(item)
+                        self.model.calc(item)
                     }
                 }
             }
