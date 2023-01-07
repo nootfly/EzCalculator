@@ -12,6 +12,7 @@ import Combine
 
 struct CalculatorView: View {
     @EnvironmentObject var model: CalculatorModel
+    @State private var orientation = UIDeviceOrientation.unknown
     
     
     let data: [CalculatorItem] = [
@@ -36,6 +37,7 @@ struct CalculatorView: View {
     
     
     var calculatorButton : some View{
+
         VStack {
             LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(data, id: \.self) { item in
@@ -68,12 +70,32 @@ struct CalculatorView: View {
     
     var body: some View {
         
-        VStack {
-            displayView
-            
-            calculatorButton
-            Spacer()
-        }.padding()
+        Group {
+            if orientation.isPortrait {
+                VStack {
+                    displayView
 
+                    calculatorButton
+                    Spacer()
+                }.padding()
+            } else if orientation.isLandscape {
+                HStack {
+                    displayView
+
+                    Spacer()
+                }.padding()
+            }
+        }
+        .onRotate { newOrientation in
+                    orientation = newOrientation
+                }
+
+    }
+}
+
+
+struct CalculatorView_Previews: PreviewProvider {
+    static var previews: some View {
+        CalculatorView()
     }
 }
